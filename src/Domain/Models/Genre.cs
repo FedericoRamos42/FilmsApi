@@ -14,6 +14,8 @@ namespace Domain.Models
         [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; } = string.Empty;
 
+        public List<Film> films { get; set; }= new List<Film>();
+
         public Genre(string name)
         {
             Name = name;

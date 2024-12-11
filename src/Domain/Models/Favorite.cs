@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class Favorites
+    public class Favorite
     {
         public int Id { get; set; }
         [Column(TypeName = "nvarchar(50)")]
@@ -18,9 +18,9 @@ namespace Domain.Models
         public User User { get; set; } = new User();
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public List<FilmFavorites> filmFavorites { get; set; } = new List<FilmFavorites>; 
+        public List<FilmFavorites> FilmFavorites { get; set; } = new List<FilmFavorites>(); 
 
-        public Favorites(string name, string description, int userId)
+        public Favorite(string name, string description, int userId)
         {
             Name = name;
             Description = description;
@@ -28,7 +28,7 @@ namespace Domain.Models
             UpdatedAt = DateTime.Now;
             UserId = userId;
         }
-        public Favorites()
+        public Favorite()
         {
             
         }

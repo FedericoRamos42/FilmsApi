@@ -10,8 +10,8 @@ namespace Domain.Models
     {
 
         public int Id { get; set; }
-        public int FavoritesId { get; set; }
-        public Favorites Favorites { get; set; } = new Favorites();
+        public int FavoriteId { get; set; }
+        public Favorite Favorite { get; set; } = new Favorite();
         public int MovieId { get; set; }
         public Film Movie { get; set; } = new Film();
         public DateTime CreatedAt { get; set; }

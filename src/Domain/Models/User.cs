@@ -25,7 +25,7 @@ namespace Domain.Models
         public Role Role { get; set; }
         public StatusUser Status { get; set; } = StatusUser.Active;
         public List<Review> Reviews { get; set; } = new List<Review>();
-        public List<Favorites> Favorites { get; set; } = new List<Favorites>();
+        public List<Favorite> Favorites { get; set; } = new List<Favorite>();
 
         public User(string name, string lastName, string email, string password, Role role)
         {
