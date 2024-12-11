@@ -27,21 +27,23 @@ namespace Infrastructure.Data
            return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task Insert(T entity)
+        public async Task<T> Insert(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
             await _context.SaveChangesAsync();
-
+            return entity;
         }
-        public async Task Update(T entity)
+        public async Task<T> Update(T entity)
         {
              _context.Set<T>().Update(entity);
              await _context.SaveChangesAsync();
+                return entity;
         }
-        public async Task Delete(T entity)
+        public async Task<T> Delete(T entity)
         {
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
+            return entity;
 
         }
 

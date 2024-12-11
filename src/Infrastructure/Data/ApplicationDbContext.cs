@@ -14,10 +14,7 @@ namespace Infrastructure.Data
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Favorite> Favorites { get; set; }
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :base (options)
-        {
-            
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :base (options){ }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
